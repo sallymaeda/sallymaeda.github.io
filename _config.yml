@@ -1,2 +1,4 @@
 # theme: jekyll-theme-cayman
-remote-theme: longpdo/neumorphism
+theme: minima
+
+# remote-theme: longpdo/neumorphism
