@@ -1,0 +1,560 @@
+<html lang="{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Japanese}ja{/block:Japanese}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}{block:PortuguesePT}pt{/block:PortuguesePT}{block:PortugueseBR}pt{/block:PortugueseBR}{block:Dutch}nl{/block:Dutch}{block:Korean}ko{/block:Korean}">
+<head>
+<!------------------------------------------------------------------
+
+     ::::::::   ::::::::   ::::::::      :::     :::::::::
+    :+:    :+: :+:    :+: :+:    :+:   :+: :+:   :+:    :+:
+    +:+    +:+ +:+        +:+         +:+   +:+  +:+    +:+
+    +#+    +:+ +#++:++#++ +#+        +#++:++#++: +#++:++#:
+    +#+    +#+        +#+ +#+        +#+     +#+ +#+    +#+
+    #+#    #+# #+#    #+# #+#    #+# #+#     #+# #+#    #+#
+     ########   ########   ########  ###     ### ###    ###
+
+    Theme Name: Oscar
+    Version: 1.3.1
+    Author: Artcore
+    More themes: https://www.tumblr.com/themes/by/artcorethemes
+
+------------------------------------------------------------------->
+<meta charset="utf-8">
+{block:PermalinkPage}
+<title>{block:PostSummary}{PostSummary} | {/block:PostSummary}{Title}</title>
+{/block:PermalinkPage}
+{block:TagPage}<title>{Tag} | {Title}</title><!--{/block:TagPage}
+{block:SearchPage}<title>{block:SearchResults}{lang:Found SearchResultCount results for SearchQuery}{/block:SearchResults}{block:NoSearchResults}{lang:No search results for SearchQuery}{/block:NoSearchResults} | {Title}</title><!--{/block:SearchPage}
+{block:IndexPage}
+<title>{block:ifMetatitle}{text:Meta title}{/block:ifMetatitle}
+{block:ifNotMetatitle}{Title}{/block:ifNotMetatitle}</title>
+{/block:IndexPage}
+{block:SearchPage}-->{/block:SearchPage}
+{block:TagPage}-->{/block:TagPage}
+<meta name="description" content="{block:TagPage}{lang:Posts tagged Tag} {/block:TagPage}{MetaDescription}"/>
+
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+
+{block:Hidden}
+<meta name="color:Primary text" content="#222"/>
+<meta name="color:Secondary text" content="#bdbdbd"/>
+<meta name="color:Sidebar background" content="#000"/>
+<meta name="color:Sidebar text" content="#ddd"/>
+<meta name="color:Navigation links" content="#fff"/>
+<meta name="color:Borders" content="#ececec"/>
+<meta name="color:Note buttons" content="#ccc">
+<meta name="color:Note buttons hover" content="#aaa">
+<meta name="color:Like button liked" content="#ec1616">
+<meta name="color:Share popup background" content="#222">
+<meta name="color:Share links" content="#999">
+<meta name="color:Share links hover" content="#fff">
+<meta name="image:Retina Avatar 192x192px" content=""/>
+<meta name="if:Enable Google fonts" content="1"/>
+<meta name="font:Body" content="Arial, Helvetica, sans-serif"/>
+<meta name="font:Headings" content="Arial, Helvetica, sans-serif"/>
+<meta name="select:Additional google font language" content="" title="None">
+<meta name="select:Additional google font language" content=",arabic" title="Arabic">
+<meta name="select:Additional google font language" content=",cyrillic" title="Cyrillic">
+<meta name="select:Additional google font language" content=",cyrillic-ext" title="Cyrillic Extended">
+<meta name="select:Additional google font language" content=",devanagari" title="Devanagari">
+<meta name="select:Additional google font language" content=",greek" title="Greek">
+<meta name="select:Additional google font language" content=",greek-ext" title="Greek Extended">
+<meta name="select:Additional google font language" content=",khmer" title="Khmer">
+<meta name="select:Additional google font language" content=",latin-ext" title="Latin Extended">
+<meta name="select:Additional google font language" content=",telugu" title="Telugu">
+<meta name="select:Additional google font language" content=",vietnamese" title="Vietnamese">
+<meta name="if:Show notes count" content="1"/>
+<meta name="if:Show tags" content="1"/>
+<meta name="if:Show note buttons" content="1"/>
+<meta name="if:Show notes widget" content="1"/>
+<meta name="if:Show RSS feed icon" content="1"/>
+<meta name="if:Show Archive link" content="1"/>
+<meta name="if:Show Random link" content="1"/>
+<meta name='text:Meta title' content=''/>
+<meta name='text:Title font size' content='22px'/>
+<meta name='text:Body font size' content='16px'/>
+<meta name='text:Headings font size' content='40px'/>
+<meta name='text:Sidebar image opacity level from 0 to 9' content='5'/>
+<meta name='text:Posts width' content='660px'/>
+<meta name='text:Read more break text' content='Read More'/>
+<meta name='text:Title Google font' content='Roboto'/>
+<meta name='text:Headings Google font' content='Roboto'/>
+<meta name='text:Body Google font' content='Open Sans'/>
+<meta name='text:Title font weight' content='700'/>
+<meta name='text:Headings font weight' content='700'/>
+<meta name='text:Headings font weight' content='700'/>
+<meta name='text:Body font weight' content='300'/>
+<meta name='text:Body font weight bold' content='600'/>
+<meta name='text:Facebook profile URL' content=''/>
+<meta name='text:Vkontakte profile URL' content=''/>
+<meta name='text:Twitter profile URL' content=''/>
+<meta name='text:Google plus profile URL' content=''/>
+<meta name='text:LinkedIn profile URL' content=''/>
+<meta name='text:Dribbble profile URL' content=''/>
+<meta name='text:Behance profile URL' content=''/>
+<meta name='text:Pinterest profile URL' content=''/>
+<meta name='text:Flickr profile URL' content=''/>
+<meta name='text:500px profile URL' content=''/>
+<meta name='text:Instagram profile URL' content=''/>
+<meta name='text:Youtube profile URL' content=''/>
+<meta name='text:Vimeo profile URL' content=''/>
+<meta name='text:SoundCloud profile URL' content=''/>
+<meta name='text:GitHub profile URL' content=''/>
+<meta name='text:Disqus Shortname' content=''/>
+<meta name='text:Google analytics id' content=''/>
+{/block:Hidden}
+
+<link rel="stylesheet" href="http://static.tumblr.com/w8wz9tm/8Ignvwpev/main.min.css">
+{block:IfEnableGoogleFonts}
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family={block:IfBodyGooglefont}{text:Body Google font}{block:ifBodyfontweight}:{text:Body font weight},{text:Body font weight}italic,{/block:ifBodyfontweight}{block:ifBodyfontweightBold}{block:ifNotBodyfontweight}:{/block:ifNotBodyfontweight}{text:Body font weight bold},{text:Body font weight bold}italic{/block:ifBodyfontweightBold}|{/block:IfBodyGooglefont}{block:IfHeadingsGooglefont}{text:Headings Google font}{block:IfHeadingsFontWeight}:{text:Headings font weight}{/block:IfHeadingsFontWeight}|{/block:IfHeadingsGooglefont}{block:IfTitleGooglefont}{text:Title Google font}{block:IfTitleFontWeight}:{text:Title font weight}{/block:IfTitleFontWeight}{/block:IfTitleGooglefont}&subset=latin{select:Additional google font language}">
+{/block:IfEnableGoogleFonts}
+
+<style type="text/css">
+
+/*-----------------------------------*/
+/*      *VARIABLES                   */
+/*-----------------------------------*/
+
+.post-meta, .tmblr-attribution a, .link-author, .source, .icon-dot-3, .tags a, .notes, #pagination, #pagination a, #footer, #footer a {
+    color: {color:Secondary text};
+}
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+    color: {color:Secondary text} !important;
+}
+.custom-like-button svg, .reblog_button svg {
+    fill: {color:Secondary text};
+}
+header {
+    color: {color:Sidebar text};
+}
+.search svg {
+    stroke: {color:Sidebar text};
+}
+header a {
+    color: {color:Navigation links};
+}
+article a {
+    color: {AccentColor};
+}
+.index article, #disqus_thread, #post-notes, .footer-wrapper, blockquote, q {
+    border-color: {color:Borders};
+}
+hr {
+    color: {color:Borders};
+    background-color: {color:Borders};
+}
+body {
+    color: {color:Primary text};
+    font-size: {text:Body font size};
+    font-family: {block:IfEnableGoogleFonts}{block:IfBodyGooglefont}'{text:Body Google font}', {/block:IfBodyGooglefont}{/block:IfEnableGoogleFonts}{font:Body};
+    {block:ifBodyfontweight}
+    font-weight: {text:Body font weight};
+    {/block:ifBodyfontweight}
+    background-color: {BackgroundColor};
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: {block:IfEnableGoogleFonts}{block:IfHeadingsGooglefont}'{text:Headings Google font}', {/block:IfHeadingsGooglefont}{/block:IfEnableGoogleFonts}{font:Headings};
+    {block:ifHeadingsfontweight}
+    font-weight: {text:Headings font weight};
+    {/block:ifHeadingsfontweight}
+}
+h1 {
+    font-size: {text:Headings font size};
+}
+strong, b {
+    font-weight: {block:ifBodyfontweightbold}{text:Body font weight bold}{/block:ifBodyfontweightbold}{block:ifNotBodyfontweightbold}bold{/block:ifNotBodyfontweightbold};
+}
+header {
+    background-color: {color:Sidebar background};
+}
+.cover-image {
+    background-image: url("{HeaderImage}");
+    opacity: .{text:Sidebar image opacity level from 0 to 9};
+}
+#title a {
+    color: {TitleColor};
+    font-family: {block:IfEnableGoogleFonts}{block:IfTitleGooglefont}'{text:Title Google font}', {/block:IfTitleGooglefont}{/block:IfEnableGoogleFonts}{TitleFont};
+    font-size: {text:Title font size};
+    font-weight: {block:IfEnableGoogleFonts}{block:IfTitleFontWeight}{text:Title Font Weight}{/block:IfTitleFontWeight}{/block:IfEnableGoogleFonts}{block:IfNotEnableGoogleFonts}{TitleFontWeight}{/block:IfNotEnableGoogleFonts};
+}
+.content-wrapper {
+    max-width: {text:Posts width};
+}
+.share-links {
+    background: {color:Share popup background};
+}
+.share-links a {
+    color: {color:Share links};
+}
+.share-links a:hover{
+    color: {color:Share links hover};
+}
+.share-links:after {
+    border-color: {color:Share popup background} transparent transparent;
+}
+.icon-dot-3 {
+    color: {color:Note buttons};
+}
+.icon-dot-3:hover {
+    color: {color:Note buttons hover};
+}
+.opacity .icon-dot-3 {
+    color: {color:Note buttons hover};
+}
+.custom-like-button svg, .reblog_button svg {
+    fill: {color:Note buttons};
+}
+.custom-like:hover .custom-like-button svg, .reblog_button svg:hover {
+    fill: {color:Note buttons hover};
+}
+.like_button.liked + .custom-like-button svg {
+    fill: {color:Like button liked};
+}
+.notes a {
+    color: {color:Primary text};
+}
+#pagination a:hover {
+    color: {color:Primary text};
+}
+@media screen and (-moz-min-device-pixel-ratio: 1.5), screen and (-o-min-device-pixel-ratio: 3/2), screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-devicepixel-ratio: 1.5), screen and (min-resolution: 1.5dppx) {
+  .logo:before {
+    background-image: url({image:Retina Avatar 192x192px});
+  }
+}
+{CustomCSS}
+</style>
+</head>
+<body>
+    <header>
+        <div class="header-wrapper">
+            <div class="section top">
+                <form action="/search" method="get" class="search">
+                    <input type="text" placeholder="Search..." name="q" value="{SearchQuery}"/>
+                    <svg class="search-icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><line class="st0" x1="10.5" y1="10.5" x2="15.3" y2="15.3"></line><circle class="st0" cx="6.8" cy="6.8" r="5.8"></circle></svg>
+                </form>
+            </div>
+            <div class="section middle">
+                {block:ShowAvatar}
+                <a href="/" class="logo {AvatarShape}">
+                    <img src="{PortraitURL-96}" width="96" height="96" alt="{Title}">
+                </a>
+                {/block:ShowAvatar}
+                {block:ShowTitle}
+                <div id="title">
+                    <a href="/">{Title}</a>
+                </div>
+                {/block:ShowTitle}
+                {block:ShowDescription}
+                <div id="description">
+                    {Description}
+                </div>
+                {/block:ShowDescription}
+                {block:HasPages}
+                <nav>
+                    {block:Pages}
+                    <a href="{URL}">{Label}</a>
+                    {/block:Pages}
+                </nav>
+                {/block:HasPages}
+                <section class="social widget">
+                    {block:ifFacebookprofileURL}<a class="icon-facebook" href="{text:Facebook profile URL}" target="_blank" title="Facebook"></a>{/block:ifFacebookprofileURL}{block:ifVkontakteprofileURL}<a class="icon-vkontakte" href="{text:Vkontakte profile URL}" target="_blank" title="Vkontakte"></a>{/block:ifVkontakteprofileURL}{block:ifTwitterprofileurl}<a class="icon-twitter" href="{text:Twitter profile url}" target="_blank" title="Twitter"></a>{/block:ifTwitterprofileurl}{block:ifGoogleplusprofileURL}<a class="icon-gplus" href="{text:Google plus profile URL}" target="_blank" title="Google+"></a>{/block:ifGoogleplusprofileURL}{block:ifInstagramprofileurl}<a class="icon-instagram" href="{text:Instagram profile url}" target="_blank" title="Instagram"></a>{/block:ifInstagramprofileurl}{block:ifLinkedInprofileURL}<a class="icon-linkedin" href="{text:LinkedIn profile URL}" target="_blank" title="Linkedin"></a>{/block:ifLinkedInprofileURL}{block:ifVineprofileurl}<a class="icon-vine" href="{text:Vine profile url}" target="_blank" title="Vine"></a>{/block:ifVineprofileurl}{block:ifDribbbleprofileurl}<a class="icon-dribbble" href="{text:Dribbble profile url}" target="_blank" title="Dribbble"></a>{/block:ifDribbbleprofileurl}{block:ifBehanceprofileurl}<a class="icon-behance" href="{text:Behance profile url}" target="_blank" title="Behance"></a>{/block:ifBehanceprofileurl}{block:ifPinterestprofileurl}<a class="icon-pinterest" href="{text:Pinterest profile url}" target="_blank" title="Pinterest"></a>{/block:ifPinterestprofileurl}{block:ifFlickrprofileurl}<a class="icon-flickr" href="{text:Flickr profile url}" target="_blank" title="Flickr"></a>{/block:ifFlickrprofileurl}{block:if500pxprofileurl}<a class="icon-fivehundredpx" href="{text:500px profile url}" target="_blank" title="500px"></a>{/block:if500pxprofileurl}{block:ifYoutubeprofileurl}<a class="icon-youtube" href="{text:Youtube profile url}" target="_blank" title="Youtube"></a>{/block:ifYoutubeprofileurl}{block:ifVimeoprofileurl}<a class="icon-vimeo" href="{text:Vimeo profile url}" target="_blank" title="Vimeo"></a>{/block:ifVimeoprofileurl}{block:ifSoundCloudprofileurl}<a class="icon-soundcloud" href="{text:SoundCloud profile url}" target="_blank" title="SoundCloud"></a>{/block:ifSoundCloudprofileurl}{block:ifGitHubprofileurl}<a class="icon-github" href="{text:GitHub profile url}" target="_blank" title="Git Hub"></a>{/block:ifGitHubprofileurl}{block:ifShowRSSfeedicon}<a class="icon-rss" href="{RSS}" target="_blank" title="RSS"></a>{/block:ifShowRSSfeedicon}
+                </section>
+            </div>
+            <div class="section bottom">
+                <menu>
+                    {block:ifShowRandomlink}
+                    <a href="/random">{lang:Random}</a>
+                    {/block:ifShowRandomlink}
+                    {block:ifShowArchivelink}
+                    <a href="/archive">{lang:Archive}</a>
+                    {/block:ifShowArchivelink}
+                    {block:SubmissionsEnabled}
+                    <a href="/submit">{SubmitLabel}</a>
+                    {/block:SubmissionsEnabled}
+                    {block:AskEnabled}
+                    <a href="/ask">{AskLabel}</a>
+                    {/block:AskEnabled}
+                </menu>
+            </div>
+            {block:ShowHeaderImage}
+            <div class="cover-image"></div>
+            {/block:ShowHeaderImage}
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="content-wrapper{block:IndexPage} index{/block:IndexPage}{block:PermalinkPage} permalink{/block:PermalinkPage}">
+            {block:SearchPage}
+            {block:SearchResults}
+            <div class="search-results">
+                {lang:Found SearchResultCount results for SearchQuery 2}
+            </div>
+            {/block:SearchResults}
+            {block:NoSearchResults}
+            <div class="search-results">
+                <span>{lang:Sorry no results for SearchQuery 2}</span>
+            </div>
+            {/block:NoSearchResults}
+            {/block:SearchPage}
+            {block:Posts inlineMediaWidth="960" inlineNestedMediaWidth="960"}
+            <article class="{PostType}{block:Photoset}set{/block:Photoset}-post">
+                {block:Text}
+                {block:Title}
+                <h1>
+                    {block:IndexPage}
+                    <a href="{Permalink}">
+                    {/block:IndexPage}
+                    {Title}
+                    {block:IndexPage}
+                    </a>
+                    {/block:IndexPage}
+                </h1>
+                {/block:Title}
+                {/block:Text}
+                {block:Chat}
+                {block:Title}
+                <h1>
+                    {block:IndexPage}
+                    <a href="{Permalink}">
+                    {/block:IndexPage}
+                    {Title}
+                    {block:IndexPage}
+                    </a>
+                    {/block:IndexPage}
+                </h1>
+                {/block:Title}
+                {/block:Chat}
+                {block:Date}
+                <div class="post-meta">
+                    <div class="meta-item">{block:IndexPage}<a href="{Permalink}">{ShortMonth} {DayOfMonth}, {Year}</a>{/block:IndexPage}{block:PermalinkPage}<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">{ShortMonth} {DayOfMonth}, {Year}</time>{/block:PermalinkPage}</div>
+                    {block:IfShownotescount}
+                    <div class="meta-item">{NoteCountWithLabel}</div>
+                    {/block:IfShownotescount}
+                </div>
+                {/block:Date}
+                {block:Text}
+                {Body}
+                {/block:Text}
+                {block:Photo}
+                <figure>
+                    {LinkOpenTag}
+                        <img src="{PhotoURL-HighRes}" width="{PhotoWidth-HighRes}" height="{PhotoHeight-HighRes}" alt="{PhotoAlt}">
+                    {LinkCloseTag}
+                </figure>
+                {block:Caption}
+                <div class="caption">
+                    {Caption}
+                </div>
+                {/block:Caption}
+                {/block:Photo}
+                {block:Photoset}
+                <div class="photoset hidden" data-layout="{PhotosetLayout}">
+                    {block:Photos}
+                    <figure class="photoset-photo" data-height="{PhotoHeight-HighRes}">
+                        <a class="photo-link" target="_blank" href="{PhotoURL-HighRes}">
+                            <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" width="{PhotoWidth-HighRes}" height="{PhotoHeight-HighRes}">
+                            {block:Caption}
+                            <div class="photoset-caption">
+                                <div class="photoset-caption-wrap">
+                                    {Caption}
+                                </div>
+                            </div>
+                            {/block:Caption}
+                        </a>
+                    </figure>
+                    {/block:Photos}
+                </div>
+                {block:Caption}
+                <div class="caption">{Caption}</div>
+                {/block:Caption}
+                {/block:Photoset}
+                {block:Video}
+                <div class="video">
+                   {Video-700}
+                </div>
+                {block:Caption}
+                <div class="caption">
+                   {Caption}
+                </div>
+                {/block:Caption}
+                {/block:Video}
+                {block:Audio}
+                <div class="audio">
+                    {block:AudioEmbed}{AudioEmbed-640}{/block:AudioEmbed}
+                </div>
+                {block:Caption}
+                <div class="caption">
+                    {Caption}
+                </div>
+                {/block:Caption}
+                {/block:Audio}
+                {block:Quote}
+                <div class="quote {Length}">
+                    <h1>“{Quote}”</h1>
+                    {block:Source}<div class="quote-source">— {Source}</div>{/block:Source}
+                </div>
+                {/block:Quote}
+                {block:Link}
+                <div class="link">
+                    {block:Thumbnail}
+                    <figure>
+                        <img src="{Thumbnail-HighRes}"{block:Description} alt="{Description}"{/block:Description}>
+                    </figure>
+                    {/block:Thumbnail}
+                    {block:Host}
+                    <div class="host-container">
+                        <a href="{URL}" target="_blank" class="host">{Host}</a>
+                    </div>
+                    {/block:Host}
+                    <h2><a href="{URL}" target="_blank">{Name}</a></h2>
+                    {block:Excerpt}
+                    <p>{Excerpt}</p>
+                    {/block:Excerpt}
+                    {block:Author}
+                    <div class="link-author">By {Author}</div>
+                    {/block:Author}
+                </div>
+                {block:Description}
+                <div class="caption">{Description}</div>
+                {/block:Description}
+                {/block:Link}
+                {block:Chat}
+                <div class="chat-body">
+                    {block:Lines}
+                    <div class="chat-line">
+                        {block:Label}
+                        <span class="chat-label"><strong>{Label}</strong></span>
+                        {/block:Label}
+                        <span class="chat-body">{Line}</span>
+                    </div>
+                    {/block:Lines}
+                </div>
+                {/block:Chat}
+                {block:More}
+                <p class="read-more-container">
+                    <a href="{Permalink}" class="read-more">{text:Read more break text}</a>
+                </p>
+                {/block:More}
+                {block:PermalinkPage}
+                {block:ContentSource}
+                <div class="content-source">
+                    <div class="source">
+                        {lang:Source}: <a href="{SourceURL}">{SourceTitle}</a>
+                    </div>
+                </div>
+                {/block:ContentSource}
+                {block:RebloggedFrom}
+                <div class="content-source">
+                    <div class="reblog source">
+                        {lang:Reblogged from ReblogParentName 2}
+                    </div>
+                </div>
+                {/block:RebloggedFrom}
+                {/block:PermalinkPage}
+                {block:Date}
+                {block:ifShownotebuttons}
+                <div class="note-buttons">
+                    <div class="export">
+                        <div class="icon-dot-3"></div>
+                        <div class="share">
+                            <div class="share-links">
+                                {block:IndexPage}
+                                <a href="{Permalink}">{lang:Permalink} &#8250;</a>
+                                {/block:IndexPage}
+                                <a href="http://twitter.com/share?{block:PostSummary}text={PostSummary}&{/block:PostSummary}url={ShortURL}" target="_blank">Twitter</a>
+                                <a href="https://www.facebook.com/sharer/sharer.php?u={ShortURL}" target="_blank">Facebook</a>
+                                <a href="https://plus.google.com/share?url={ShortURL}" target="_blank">Google+</a>
+                                {block:Photo}
+                                <a href="http://pinterest.com/pin/create/link/?url={ShortURL}&media={PhotoURL-1280}&description={PhotoAlt}" target="_blank">Pinterest</a>
+                                {/block:Photo}
+                            </div>
+                        </div>
+                    </div>
+                    {ReblogButton size="18"}
+                    <div class="custom-like">
+                        {LikeButton size="18"}
+                        <div class="custom-like-button">
+                            <svg width="18" height="18" viewBox="0 0 19 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ccc"><path d="M14.0425097,0.000920262799 C16.1435097,-0.0400797372 18.8835097,1.28192026 18.9635097,5.36992026 C19.0525097,9.95492026 15.1985097,13.3079203 9.48350967,16.2089203 C3.76650967,13.3079203 -0.0874903349,9.95492026 0.00150966509,5.36992026 C0.0815096651,1.28192026 2.82150967,-0.0400797372 4.92250967,0.000920262799 C7.02450967,0.0419202628 8.87050967,2.26592026 9.46950967,2.92792026 C10.0945097,2.26592026 11.9405097,0.0419202628 14.0425097,0.000920262799 Z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+                {/block:ifShownotebuttons}
+                {/block:Date}
+                {block:ifShowtags}
+                {block:HasTags}
+                <div class="tags">
+                    {block:Tags}
+                    <a href="{TagURL}">{Tag}</a>
+                    {/block:Tags}
+                </div>
+                {/block:HasTags}
+                {/block:ifShowtags}
+            </article>
+            {block:PermalinkPage}
+            {block:Date}
+            {block:ifShownoteswidget}
+            {block:PostNotes}
+            <section id="post-notes">
+                <h4>{NoteCountWithLabel}</h4>
+                {PostNotes-64}
+            </section>
+            {/block:PostNotes}
+            {/block:ifShownoteswidget}
+            {block:IfDisqusShortname}
+            <section id="disqus_thread"></section>
+            {/block:IfDisqusShortname}
+            {/block:Date}
+            {/block:PermalinkPage}
+            {/block:Posts}
+            {block:Pagination}
+            <nav id="pagination">
+                {block:PreviousPage}
+                <a href="{PreviousPage}" class="previous">‹ {lang:Previous page}</a>
+                {/block:PreviousPage}
+                {block:NextPage}
+                <a href="{NextPage}" class="next">{lang:Next page} ›</a>
+                {/block:NextPage}
+                <div class="page-numbers">{lang:Page CurrentPage of TotalPages}
+                </div>
+            </nav>
+            {/block:Pagination}
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="footer-wrapper">© {Title} {CopyrightYears}. {lang:Powered by Tumblr 2}. Theme by <a href="https://www.tumblr.com/themes/by/artcorethemes">Artcore</a>
+        </div>
+    </footer>
+    <script src="//static.tumblr.com/gjibttz/c4Mnmefbm/jquery-2.1.3.min.js"></script>
+    <script src="http://static.tumblr.com/w8wz9tm/m28nvsmac/main.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("article").fitVids({
+                customSelector: "iframe[src*='vine'], iframe[src*='tumblr']",
+                ignore: '#ask_form, #submit_form'
+            });
+        });
+        {block:PermalinkPage}
+        {block:Posts}
+        {block:Date}
+        {block:IfDisqusShortname}
+        var disqusShortname = '{text:Disqus shortname}';
+        (function(){
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqusShortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+        {/block:IfDisqusShortname}
+        {/block:Date}
+        {/block:Posts}
+        {/block:PermalinkPage}
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', '{text:Google analytics id}', 'auto');
+      ga('send', 'pageview');
+    </script>
+</body>
+</html>
